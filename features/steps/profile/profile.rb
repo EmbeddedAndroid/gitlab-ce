@@ -170,7 +170,7 @@ class Spinach::Features::Profile < Spinach::FeatureSteps
 
   step 'I should see groups I belong to' do
     page.within ".content" do
-      click_link "Groups"
+      click_link "Foundries"
     end
 
     page.within "#groups" do

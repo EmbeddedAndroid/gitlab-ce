@@ -8,13 +8,13 @@
       %span
         Projects
   = nav_link(controller: [:groups, 'groups/milestones', 'groups/group_members']) do
-    = link_to explore_groups_path, title: 'Groups', class: 'dashboard-shortcuts-groups' do
+    = link_to explore_groups_path, title: 'Foundries', class: 'dashboard-shortcuts-groups' do
       .shortcut-mappings
         .key
           = icon('arrow-up', 'aria-label' => 'hidden')
           G
       %span
-        Groups
+        Foundries
   = nav_link(controller: :snippets) do
     = link_to explore_snippets_path, title: 'Snippets', class: 'dashboard-shortcuts-snippets' do
       .shortcut-mappings
