@@ -18,12 +18,10 @@
                 = brand_image
                 = brand_text
               - else
-                %h3 Open source software to collaborate on code
+                %h3 End-to-end IoT platform enabling product development with latest open source software
 
                 %p
-                  Manage Git repositories with fine-grained access controls that keep your code secure.
-                  Perform code reviews and enhance collaboration with merge requests.
-                  Each project can also have an issue tracker and a wiki.
+                  Use the foundry to access your code privately and securely.
 
               - if current_application_settings.sign_in_text.present?
                 = markdown_field(current_application_settings, :sign_in_text)
@@ -32,5 +30,5 @@
       .container.footer-container
         .footer-links
           = link_to "Explore", explore_root_path
-          = link_to "Help", help_path
-          = link_to "About GitLab", "https://about.gitlab.com/"
+          = link_to "Support", "https://opensourcefoundries.com/support"
+          = link_to "About ", "https://opensourcefoundries.com/help"
