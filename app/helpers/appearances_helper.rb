@@ -8,11 +8,7 @@ module AppearancesHelper
   end
 
   def brand_image
-    if brand_item.logo?
-      image_tag brand_item.logo
-    else
       nil
-    end
   end
 
   def brand_text
