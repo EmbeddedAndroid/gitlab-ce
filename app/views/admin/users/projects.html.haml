@@ -1,9 +1,9 @@
-- page_title "Groups and projects", @user.name, "Users"
+- page_title "Foundries and projects", @user.name, "Users"
 = render 'admin/users/head'
 
 - if @user.groups.any?
   .panel.panel-default
-    .panel-heading Group projects
+    .panel-heading Foundry projects
     %ul.well-list
       - @user.group_members.includes(:source).each do |group_member|
         - group = group_member.group
@@ -14,7 +14,7 @@
           .pull-right
             %span.light.vertical-align-middle= group_member.human_access
             - unless group_member.owner?
-              = link_to group_group_member_path(group, group_member), data: { confirm: remove_member_message(group_member) }, method: :delete, remote: true, class: "btn-xs btn btn-remove prepend-left-10", title: 'Remove user from group' do
+              = link_to group_group_member_path(group, group_member), data: { confirm: remove_member_message(group_member) }, method: :delete, remote: true, class: "btn-xs btn btn-remove prepend-left-10", title: 'Remove user from foundry' do
                 %i.fa.fa-times.fa-inverse
 
 .row
