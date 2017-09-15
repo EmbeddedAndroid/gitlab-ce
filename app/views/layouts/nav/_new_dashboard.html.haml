@@ -1,9 +1,9 @@
 %ul.list-unstyled.navbar-sub-nav
-  = nav_link(controller: ['dashboard/groups', 'explore/groups'], html_options: {class: "home"}) do
+  = nav_link(controller: ['root#index', 'dashboard/groups', 'explore/groups'], html_options: {class: "home"}) do
     = link_to dashboard_groups_path, class: 'dashboard-shortcuts-groups', title: 'Foundries' do
       Foundries
 
-  = nav_link(path: ['root#index', 'projects#trending', 'projects#starred', 'dashboard/projects#index']) do
+  = nav_link(path: ['projects#trending', 'projects#starred', 'dashboard/projects#index']) do
     = link_to dashboard_projects_path, title: 'Projects', class: 'dashboard-shortcuts-projects' do
       Projects
 

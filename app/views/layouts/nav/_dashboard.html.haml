@@ -1,4 +1,17 @@
 %ul
+  - if koding_enabled?
+    = nav_link(controller: :koding) do
+      = link_to koding_path, title: 'Koding' do
+        %span
+          Koding
+  = nav_link(controller: ['root#index', :groups, 'groups/milestones', 'groups/group_members'], html_options: {class: "#{project_tab_class} home"}) do
+    = link_to dashboard_groups_path, class: 'dashboard-shortcuts-groups', title: 'Foundries' do
+      .shortcut-mappings
+        .key
+          = icon('arrow-up', 'aria-label' => 'hidden')
+          G
+      %span
+        Foundries
   = nav_link(path: 'dashboard#activity') do
     = link_to activity_dashboard_path, class: 'dashboard-shortcuts-activity', title: 'Activity' do
       .shortcut-mappings
@@ -7,19 +20,14 @@
           A
       %span
         Activity
-  - if koding_enabled?
-    = nav_link(controller: :koding) do
-      = link_to koding_path, title: 'Koding' do
-        %span
-          Koding
-  = nav_link(controller: [:groups, 'groups/milestones', 'groups/group_members'], html_options: {class: "#{project_tab_class} home"}) do
-    = link_to dashboard_groups_path, class: 'dashboard-shortcuts-groups', title: 'Foundries' do
+  = nav_link(path: ['projects#trending', 'projects#starred', 'dashboard/projects#index']) do
+    = link_to dashboard_projects_path, title: 'Projects', class: 'dashboard-shortcuts-projects' do
       .shortcut-mappings
         .key
           = icon('arrow-up', 'aria-label' => 'hidden')
-          G
+          P
       %span
-        Foundries
+        Projects
   = nav_link(controller: 'dashboard/milestones') do
     = link_to dashboard_milestones_path, class: 'dashboard-shortcuts-milestones', title: 'Milestones' do
       .shortcut-mappings
