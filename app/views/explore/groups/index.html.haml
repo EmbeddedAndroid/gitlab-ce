@@ -14,10 +14,9 @@
     .svg-container
       = custom_icon('icon_explore_groups_splash')
     .inner-content
-      %p Below you will find all the groups that are public.
-      %p You can easily contribute to them by requesting to join these groups.
+      %p Below you will find all the foundries that are public.
 
 - if @groups.present?
   = render 'groups'
 - else
-  .nothing-here-block No public groups
+  .nothing-here-block No public foundries

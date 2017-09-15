@@ -6,7 +6,7 @@
 
 .form-group
   = f.label :path, class: 'control-label' do
-    Group path
+    Foundry path
   .col-sm-10
     .input-group.gl-field-error-anchor
       .group-root-path.input-group-addon.has-tooltip{ title: group_path, :'data-placement' => 'bottom' }
@@ -31,7 +31,7 @@
 
 .form-group.group-name-holder
   = f.label :name, class: 'control-label' do
-    Group name
+    Foundry name
   .col-sm-10
     = f.text_field :name, class: 'form-control',
       required: true,
