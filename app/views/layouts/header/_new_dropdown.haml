@@ -18,9 +18,9 @@
               = link_to 'New project', new_project_path(namespace_id: @group.id)
           - if create_group_subgroup
             %li
-              = link_to 'New subgroup', new_group_path(parent_id: @group.id)
+              = link_to 'New nested foundry', new_group_path(parent_id: @group.id)
           %li.divider
-          %li.dropdown-bold-header GitLab
+          %li.dropdown-bold-header TheFoundry
 
       - if @project&.persisted?
         - create_project_issue = can?(current_user, :create_issue, @project)
@@ -38,7 +38,7 @@
             %li.header-new-project-snippet
               = link_to 'New snippet', new_project_snippet_path(@project)
           %li.divider
-          %li.dropdown-bold-header GitLab
+          %li.dropdown-bold-header TheFoundry
       - if current_user.can_create_project?
         %li
           = link_to 'New project', new_project_path
