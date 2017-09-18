@@ -15,6 +15,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user_from_rss_token!
   before_action :authenticate_user!
   before_action :validate_user_service_ticket!
+  before_action :force_authenticated_user!
   before_action :check_password_expiration
   before_action :ldap_security_check
   before_action :sentry_context
@@ -119,6 +120,12 @@ class ApplicationController < ActionController::Base
     application_trace = ActionDispatch::ExceptionWrapper.new(env, exception).application_trace
     application_trace.map!{ |t| "  #{t}\n" }
     logger.error "\n#{exception.class.name} (#{exception.message}):\n#{application_trace.join}"
+  end
+
+  def force_authenticated_user!(*args)
+    if (!current_user) and (["/users/sign_in", "/users/password/new", "/users/password", "/users/password/edit"].exclude?(request.path))
+        redirect_to new_user_session_path and return
+    end
   end
 
   def after_sign_in_path_for(resource)
