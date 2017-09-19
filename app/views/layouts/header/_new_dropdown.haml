@@ -12,7 +12,7 @@
         - create_group_project = can?(current_user, :create_projects, @group)
         - create_group_subgroup = can?(current_user, :create_subgroup, @group)
         - if create_group_project || create_group_subgroup
-          %li.dropdown-bold-header This group
+          %li.dropdown-bold-header This foundry
           - if create_group_project
             %li.header-new-group-project
               = link_to 'New project', new_project_path(namespace_id: @group.id)
