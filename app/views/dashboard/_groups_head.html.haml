@@ -8,8 +8,8 @@
       = link_to dashboard_groups_path, title: 'Your foundries' do
         Your foundries
     = nav_link(page: explore_groups_path) do
-      = link_to explore_groups_path, title: 'Explore Our Open Source Foundries' do
-        Explore Our Open Source Foundries
+      = link_to explore_groups_path, title: 'Explore foundry projects' do
+        Explore foundry projects
   .nav-controls{ class: ("nav-controls-new-nav" if show_new_nav?) }
     = render 'shared/groups/search_form'
     = render 'shared/groups/dropdown'
