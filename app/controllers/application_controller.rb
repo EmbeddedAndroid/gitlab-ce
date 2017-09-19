@@ -123,7 +123,7 @@ class ApplicationController < ActionController::Base
   end
 
   def force_authenticated_user!(*args)
-    if (!current_user) and (["/users/sign_in", "/users/password/new", "/users/password", "/users/password/edit"].exclude?(request.path))
+    if (!current_user) and (["/users/sign_in", "/users/password/new", "/users/password", "/users/password/edit", "/users/auth/github/callback"].exclude?(request.path))
         redirect_to new_user_session_path and return
     end
   end
