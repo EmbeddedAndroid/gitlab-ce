@@ -1,5 +1,5 @@
 - @no_container = true
-- page_title "Groups"
+- page_title "Foundries"
 = render "admin/dashboard/head"
 
 %div{ class: container_class }
@@ -30,7 +30,7 @@
                 = link_to admin_groups_path(sort: sort_value_largest_group, name: project_name) do
                   = sort_title_largest_group
           = link_to new_admin_group_path, class: "btn btn-new" do
-            New group
+            New foundry
   %ul.content-list
     = render @groups
 
