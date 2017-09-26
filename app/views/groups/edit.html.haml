@@ -14,13 +14,13 @@
             = image_tag group_icon(@group), alt: '', class: 'avatar group-avatar s160'
           %p.light
             - if @group.avatar?
-              You can change your group avatar here
+              You can change your foundry avatar here
             - else
-              You can upload a group avatar here
+              You can upload a foundry avatar here
           = render 'shared/choose_group_avatar_button', f: f
           - if @group.avatar?
             %hr
-            = link_to 'Remove avatar', group_avatar_path(@group.to_param), data: { confirm: "Group avatar will be removed. Are you sure?"}, method: :delete, class: "btn btn-remove btn-sm remove-avatar"
+            = link_to 'Remove avatar', group_avatar_path(@group.to_param), data: { confirm: "Foundry avatar will be removed. Are you sure?"}, method: :delete, class: "btn btn-remove btn-sm remove-avatar"
 
       = render 'shared/visibility_level', f: f, visibility_level: @group.visibility_level, can_change_visibility_level: can_change_group_visibility_level?(@group), form_model: @group
 
@@ -51,9 +51,9 @@
   .panel-body
     = form_tag(@group, method: :delete) do
       %p
-        Removing group will cause all child projects and resources to be removed.
+        Removing foundry will cause all child projects and resources to be removed.
         %br
-        %strong Removed group can not be restored!
+        %strong Removed foundry can not be restored!
 
       .form-actions
         = button_to 'Remove group', '#', class: "btn btn-remove js-confirm-danger", data: { "confirm-danger-message" => remove_group_message(@group) }
