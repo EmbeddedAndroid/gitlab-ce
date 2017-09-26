@@ -1,14 +1,14 @@
 %ul.list-unstyled.navbar-sub-nav
-  = nav_link(path: ['root#index', 'projects#trending', 'projects#starred', 'dashboard/projects#index'], html_options: { id: 'nav-projects-dropdown', class: "home dropdown header-projects" }) do
-    %a{ href: "#", data: { toggle: "dropdown" } }
+  = nav_link(controller: ['root#index', 'dashboard/groups', 'explore/groups'], html_options: { id: 'nav-groups-dropdown', class: "home dropdown header-groups" }) do
+    %a{ href: "#", data: { toggle: "dropdown" }
+    = link_to dashboard_groups_path, class: 'dashboard-shortcuts-groups', title: 'Foundries' do
+      Foundries
+
+  = nav_link(path: ['projects#trending', 'projects#starred', 'dashboard/projects#index']) do
       Projects
       = custom_icon('caret_down')
     .dropdown-menu.projects-dropdown-menu
       = render "layouts/nav/projects_dropdown/show"
-
-  = nav_link(controller: ['dashboard/groups', 'explore/groups'], html_options: { class: "hidden-xs" }) do
-    = link_to dashboard_groups_path, class: 'dashboard-shortcuts-groups', title: 'Foundries' do
-      Foundries
 
   = nav_link(path: 'dashboard#activity', html_options: { class: "visible-lg" }) do
     = link_to activity_dashboard_path, class: 'dashboard-shortcuts-activity', title: 'Activity' do
