@@ -1,9 +1,9 @@
-- page_title "Groups and projects", @user.name, "Users"
+- page_title "Foundries and projects", @user.name, "Users"
 = render 'admin/users/head'
 
 - if @user.groups.any?
   .panel.panel-default
-    .panel-heading Group projects
+    .panel-heading Foundry projects
     %ul.well-list
       - @user.group_members.includes(:source).each do |group_member|
         - group = group_member.group

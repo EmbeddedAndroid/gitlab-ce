@@ -1,6 +1,6 @@
 - add_to_breadcrumbs "Groups", admin_groups_path
 - breadcrumb_title @group.name
-- page_title @group.name, "Groups"
+- page_title @group.name, "Foundries"
 %h3.page-title
   Group: #{@group.full_name}
 
@@ -108,13 +108,13 @@
             .prepend-top-10
               = select_tag :access_level, options_for_select(GroupMember.access_level_roles), class: "project-access-select select2"
             %hr
-            = button_tag 'Add users to group', class: "btn btn-create"
+            = button_tag 'Add users to foundry', class: "btn btn-create"
       = render 'shared/members/requests', membership_source: @group, requesters: @requesters, force_mobile_view: true
 
     .panel.panel-default
       .panel-heading
         %strong= @group.name
-        group members
+        foundry members
         %span.badge= @group.members.size
         .pull-right
           = link_to icon('pencil-square-o', text: 'Manage access'), polymorphic_url([@group, :members]), class: "btn btn-xs"
