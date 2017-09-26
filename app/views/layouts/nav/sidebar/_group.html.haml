@@ -11,7 +11,7 @@
           = @group.name
     %ul.sidebar-top-level-items
       = nav_link(path: ['groups#show', 'groups#activity', 'groups#subgroups'], html_options: { class: 'home' }) do
-        = sidebar_link group_path(@group), title: _('Group overview') do
+        = sidebar_link group_path(@group), title: _('Foundry overview') do
           .nav-icon-container
             = custom_icon('project')
           %span.nav-item-name
@@ -24,7 +24,7 @@
                 #{ _('Overview') }
           %li.divider.fly-out-top-item
           = nav_link(path: ['groups#show', 'groups#subgroups'], html_options: { class: 'home' }) do
-            = link_to group_path(@group), title: 'Group details' do
+            = link_to group_path(@group), title: 'Foundry details' do
               %span
                 Details
 
