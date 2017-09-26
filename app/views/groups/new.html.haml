@@ -1,8 +1,8 @@
 - @breadcrumb_link = dashboard_groups_path
 - breadcrumb_title "Groups"
 - @hide_top_links = true
-- page_title    'New Group'
-- header_title  "Groups", dashboard_groups_path
+- page_title    'New Foundry'
+- header_title  "Foundries", dashboard_groups_path
 
 %h3.page-title
   New Group
@@ -26,5 +26,5 @@
       = render 'shared/group_tips'
 
   .form-actions
-    = f.submit 'Create group', class: "btn btn-create"
+    = f.submit 'Create foundry', class: "btn btn-create"
     = link_to 'Cancel', dashboard_groups_path, class: 'btn btn-cancel'
