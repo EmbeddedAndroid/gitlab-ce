@@ -7,8 +7,8 @@
       = render "layouts/nav/projects_dropdown/show"
 
   = nav_link(controller: ['dashboard/groups', 'explore/groups'], html_options: { class: "hidden-xs" }) do
-    = link_to dashboard_groups_path, class: 'dashboard-shortcuts-groups', title: 'Groups' do
-      Groups
+    = link_to dashboard_groups_path, class: 'dashboard-shortcuts-groups', title: 'Foundries' do
+      Foundries
 
   = nav_link(path: 'dashboard#activity', html_options: { class: "visible-lg" }) do
     = link_to activity_dashboard_path, class: 'dashboard-shortcuts-activity', title: 'Activity' do
@@ -29,8 +29,8 @@
     .dropdown-menu
       %ul
         = nav_link(controller: ['dashboard/groups', 'explore/groups'], html_options: { class: "visible-xs" }) do
-          = link_to dashboard_groups_path, class: 'dashboard-shortcuts-groups', title: 'Groups' do
-            Groups
+          = link_to dashboard_groups_path, class: 'dashboard-shortcuts-groups', title: 'Foundries' do
+            Foundries
 
         = nav_link(path: 'dashboard#activity') do
           = link_to activity_dashboard_path, title: 'Activity' do
