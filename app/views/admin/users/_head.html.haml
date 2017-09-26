@@ -18,7 +18,7 @@
   = nav_link(path: 'users#show') do
     = link_to "Account", admin_user_path(@user)
   = nav_link(path: 'users#projects') do
-    = link_to "Groups and projects", projects_admin_user_path(@user)
+    = link_to "Foundries and projects", projects_admin_user_path(@user)
   = nav_link(path: 'users#keys') do
     = link_to "SSH keys", keys_admin_user_path(@user)
   = nav_link(controller: :identities) do
