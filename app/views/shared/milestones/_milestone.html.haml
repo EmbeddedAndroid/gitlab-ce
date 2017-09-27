@@ -6,7 +6,7 @@
     .col-sm-6
       %strong= link_to truncate(milestone.title, length: 100), milestone_path
       - if milestone.group_milestone?
-        %span - Group Milestone
+        %span - Foundry Milestone
       - else
         %span - Project Milestone
 
