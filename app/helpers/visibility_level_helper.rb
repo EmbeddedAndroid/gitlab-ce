@@ -40,11 +40,11 @@ module VisibilityLevelHelper
   def group_visibility_level_description(level)
     case level
     when Gitlab::VisibilityLevel::PRIVATE
-      "The group and its projects can only be viewed by members."
+      "The foundry and its projects can only be viewed by members."
     when Gitlab::VisibilityLevel::INTERNAL
-      "The group and any internal projects can be viewed by any logged in user."
+      "The foundry and any internal projects can be viewed by any logged in user."
     when Gitlab::VisibilityLevel::PUBLIC
-      "The group and any public projects can be viewed without any authentication."
+      "The foundry and any public projects can be viewed without any authentication."
     end
   end
 
