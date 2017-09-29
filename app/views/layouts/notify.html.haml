@@ -15,9 +15,9 @@
         - if @target_url
           - if @reply_by_email
             Reply to this email directly or
-            #{link_to "view it on GitLab", @target_url}.
+            #{link_to "view it on The Foundry", @target_url}.
           - else
-            #{link_to "View it on GitLab", @target_url}.
+            #{link_to "View it on The Foundry", @target_url}.
           %br
           -# Don't link the host in the line below, one link in the email is easier to quickly click than two.
           You're receiving this email because of your account on #{Gitlab.config.gitlab.host}.
